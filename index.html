@@ -3,30 +3,237 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPD2</title>
-    <script src="main.js"></script>
+    <title>WeathERrrr - Home</title>
+
+    <!-- Bootstrap CSS file -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="d-flex justify-content-center">
-        <h1 class="m-2">Hola, mundo!</h1>
+    <header id="header">
+        <div class="container">
+            <h1>WeathERrrr</h1>
+        </div>
+    </header>
+    <nav id="nav">
+        <div class="container">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main id="main-content">
+            <h2 id="site-description">Site description</h2>
+            <p>This website will show information about weather broadcast in cities across Europe.</p>
+            <div class="list-group">
+                <a href="#site-description" class="list-group-item list-group-item-action">
+                    Site description
+                </a>
+                <a href="#data-descripiton" class="list-group-item list-group-item-action">Description of data</a>
+                <a href="#current-weather" class="list-group-item list-group-item-action">Weather by cities</a>
+                <a href="#forecast" class="list-group-item list-group-item-action">Forecast temperatures</a>
+            </div>
+
+            <hr>
+            <h3 id="data-descripiton">Description of data</h3>
+            <p>There will be three measurements.</p>
+
+            <ul>
+                <li>Temperature</li>
+                <li>Wind speed</li>
+                <li>Description of weather</li>
+            </ul>
+
+            <hr>
+            <h3 id="current-weather">Weather by cities</h3>
+            <p>This section will show weather by cities:</p>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Zagreb</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">+10 °C</li>
+                            <li class="list-group-item">22 km/h</li>
+                            <li class="list-group-item">Sunny</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Sevilla</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">+20 °C</li>
+                            <li class="list-group-item">17 km/h</li>
+                            <li class="list-group-item">Sunny</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Berlin</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">+5 °C</li>
+                            <li class="list-group-item">5 km/h</li>
+                            <li class="list-group-item">Raining</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p>Refreshing...</p>
+
+            <hr>
+            <h3 id="forecast">Forecast temperatures</h3>
+            <p>Here you can see predictions of future temperatures for 3 upcoming hours:</p>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Zagreb</th>
+                            <th>Sevilla</th>
+                            <th>Berlin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+12 °C</td>
+                            <td>+20 °C</td>
+                            <td>+1 °C</td>
+                        </tr>
+                        <tr>
+                            <td>+13 °C</td>
+                            <td>+23 °C</td>
+                            <td>+2 °C</td>
+                        </tr>
+                        <tr>
+                            <td>+11 °C</td>
+                            <td>+23 °C</td>
+                            <td>+1 °C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/300x200.png" alt="Placeholder image"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Zagreb</h5>
+                                            <p class="card-text">Zagreb is the most important transport hub in Croatia:
+                                                here Central Europe, the Mediterranean and Southeast Europe meet, making
+                                                the Zagreb area the centre of the road, rail and air networks of
+                                                Croatia. It is a city known for its diverse economy, high quality of
+                                                living, museums, sporting, and entertainment events.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/300x200.png" alt="Placeholder image"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sevilla</h5>
+                                            <p class="card-text">The city of Seville (or Sevilla in spanish) is the
+                                                capital of the Spanish region and province of Andalusia and has about
+                                                700,000 inhabitants, making Seville the fourth largest city in Spain. In
+                                                the cultural, political, economic and artistic realms, Seville is the
+                                                most important southern Spanish city.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 5 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/300x200.png" alt="Placeholder image"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Berlin</h5>
+                                            <p class="card-text">Berlin is the capital and chief urban center of
+                                                Germany. Berlin was the capital of Prussia and then, from 1871, of a
+                                                unified Germany. Though partitioned into East and West Berlin after
+                                                World War II, the reunification of East and West Germany led to Berlin's
+                                                reinstatement as the all-German capital in 1990.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 20 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
     </div>
-    <h2 class="d-flex justify-content-center">Optimum temperature is between 20°C and 22°C</h2>
+    <footer id="page-footer" class="py-3">
+        <div class="container text-center">
+            Copyright &copy; 2023
+        </div>
+    </footer>
 
-    Which temperature would you like?
-
-    Options
-
-    fetch
-
-
-
-    <div id="json-content"></div>
-
+    <!-- Bootstrap 5 JS Bundle with Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
